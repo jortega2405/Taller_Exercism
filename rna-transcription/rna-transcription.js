@@ -1,8 +1,8 @@
-//
-// This is only a SKELETON file for the 'RNA Transcription' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
-export const toRna = () => {
-  throw new Error('Remove this statement and implement this function');
-};
+const pair = {G:'C',C:'G',T:'A',A:'U'};
+export const toRna = (dna) => {
+  dna = dna.toUpperCase();
+  const dnaString = dna.split('');
+  const array = dnaString.map(strand => pair[strand]);
+   const rna = array.join('');
+  return  rna;
+   }
